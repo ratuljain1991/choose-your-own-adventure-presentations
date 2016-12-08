@@ -10,16 +10,16 @@
 <div class="container sign-in">
     <div class="col-md-12">
         <div id="login">
-            <h1>Wizards Only!</h1>
+            <h1>Wizards Only not!</h1>
             {% from "partials/_formhelpers.html" import render_field %}
-            <form method="post" action="{{ url_for('sign_in') }}" 
+            <form method="post" action="{{ url_for('sign_in') }}"
                   id="login-form">
                 {{ form.csrf_token }}
                 {{ render_field(form.wizard_name, required=True) }}
                 <br>
                 {{ render_field(form.password, required=True) }}
                 <div style="margin-top: 10px; text-align: right;">
-                    <input class="btn btn-primary" 
+                    <input class="btn btn-primary"
                            type="submit" value="Sign in" />
                 </div>
             </form>
